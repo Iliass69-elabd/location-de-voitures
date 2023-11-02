@@ -1,0 +1,31 @@
+body {
+  position: relative;
+}
+.loadingSection {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  /* right: 0; */
+  z-index: 1700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+}
+.loadingSection img {
+  animation: infinite 1s linear loading;
+  margin-bottom: 10px;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

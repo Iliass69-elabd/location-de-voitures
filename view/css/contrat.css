@@ -1,0 +1,136 @@
+*{
+    font-family: none;
+}
+.imprimer {
+    margin: 15px 30px;
+    background-color: #3ab1cf;
+    border-radius: 5px;
+    outline: transparent;
+    border: transparent solid;
+    padding: 5px 10px;
+    color: white;
+    font-weight: 500;
+}
+.imprimer:hover {
+    background-color: #32a4c0;
+    cursor: pointer;
+}
+.hide-contrat{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    background-color: #ffffff;
+  
+  }
+  .hide-contrat img{
+    height: 50px;
+  }
+  .hide-contrat a{
+    color: #000000;
+    padding: 10px;
+    font-size: 20px;
+  }
+/* _______contrat________________ */
+
+.contrat {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    padding: 1cm;
+    
+}
+.logo_contrat {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.logo_contrat img {
+    filter: brightness(0);
+    height: 2.1cm;
+    float: right;
+}
+.contrat_head {
+    display: flex;
+    width: 100%;
+    /* position: absolute; */
+    justify-content: center;
+    align-items: center;
+    color: rgb(66, 6, 255);
+    font-weight: 600;
+    font-size: 17px;
+    /* margin-top: 1.2cm; */
+}
+
+.SOUSSIGNES {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 0.5cm;
+    font-size: 15px;
+}
+.client_c {
+    text-transform: capitalize;
+}
+.p1 {
+    font-size: 16px;
+    padding: 0.4cm 0;
+}
+.p_titles {
+    color: rgb(66, 6, 255);
+    font-size: 15px;
+}
+.c6 ul {
+    margin-left: 0.4cm;
+    list-style: none;
+}
+.c_containers {
+    padding: 0.1cm 0;
+}
+.ville {
+    text-transform: uppercase;
+}
+.table_s {
+    border: 1px solid black;
+    background: none;
+    width: 90%;
+    margin: 0.5cm auto;
+}
+.table_s th {
+    color: black;
+    background: none;
+    padding: 0;
+    border: transparent;
+    text-transform: none;
+}
+.table_s td {
+    color: black;
+    background: none;
+    border: transparent;
+    padding: 0;
+}
+.table_s th:nth-child(1) {
+    border-right: 1px solid black;
+}
+.table_s td:nth-child(1) {
+    border-right: 1px solid black;
+}
+.table_s th:hover {
+    background: none;
+}
+.table_s td:hover {
+    background: none;
+}
+@media print {
+    .nav_container {
+        display: none;
+    }
+    .imprimer {
+        display: none;
+    }
+}

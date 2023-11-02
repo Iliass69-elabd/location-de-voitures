@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap%27");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #050801;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold; */
+  background-color: #f3f4f9;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+}
+.nav {
+  height: 70px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f3f4f9;
+  padding: 0 30px;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+}
+.nav-title img {
+  width: 110px;
+  margin-left: 20px;
+  margin-top: 15px;
+  /* filter: brightness(00); */
+}
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #000000;
+  height: 100%;
+  text-align: center;
+
+  /* borer-bottom: solid black 1px; */
+}
+
+.nav > .nav-links > a:hover {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #000000;
+  border-radius: 10px;
+  /* border-bottom: #a5d4de solid 2px; */
+  /* border-bottom: solid black 1px; */
+}
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000000;
+  transition: width 0.3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  /* //transition: width .3s; */
+}
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+  }
+  .nav {
+    height: 70px;
+    width: 100%;
+    background-color: #f3f4f9;
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed;
+      padding: 0 0px; */
+    top: 0;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    /* background-color: #000000; */
+    border-top: 2px solid #000000;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    /* background: linear-gradient(
+  135deg,
+  rgba(255, 255, 255, 0.1),
+  rgba(255, 255, 255, 0)
+);
+backdrop-filter: blur(30px);
+backdrop-filter: blur(20px);
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
+    height: 0px;
+    color: #000000;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 70px;
+    left: 0px;
+  }
+  .nav > .nav-links:hover {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    /* background: linear-gradient(
+  135deg,
+  rgba(255, 255, 255, 0.1),
+  rgba(255, 255, 255, 0)
+);
+backdrop-filter: blur(20px);
+backdrop-filter: blur(20px);
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
+    height: 0px;
+
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 70px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+
+    color: rgb(0, 0, 0);
+    /* border-bottom: solid black 1px; */
+  }
+  .nav > .nav-links > a {
+    display: block;
+    transition: 0.5s;
+    width: 100%;
+  }
+  .nav > .nav-links > a:nth-child(1):hover {
+    display: block;
+    width: 100%;
+    color: black;
+  }
+  .nav > .nav-links > a:nth-child(2):hover {
+    display: block;
+    width: 100%;
+    color: black;
+  }
+  .nav > .nav-links > a:nth-child(3):hover {
+    display: block;
+    width: 100%;
+    color: black;
+  }
+  .nav > .nav-links > a:nth-child(4):hover {
+    display: block;
+    width: 100%;
+    color: black;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: fit-content;
+    overflow-y: auto;
+  }
+  .nav-title img {
+    width: 100px;
+    filter: brightness(0);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    margin-top: 0px;
+  }
+}
+
+/* ______ start signin   section __________ */
+
+.sign_in_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  padding: 25px;
+}
+.sign_in_section form {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px;
+}
+.sign_in_section h1 {
+  font-size: 40px;
+  color: rgb(0, 29, 60);
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+.sign_in_section form label {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.sign_in_section form label {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  color: rgb(0, 29, 60);
+  font-weight: bolder;
+}
+.sign_in_section form label input {
+  width: 500px;
+  height: 35px;
+  outline: rgb(0, 29, 60);
+  border: #425c81;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #f3f4f9;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.sign_in_section form label textarea {
+  min-width: 500px;
+  min-height: 100px;
+  max-width: 500px;
+  max-height: 100px;
+  outline: #425c81;
+  border: #425c81;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #f3f4f9;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.sign_in_section .form_buttons input {
+  text-align: center;
+  font-size: 15px;
+  background-color: rgb(0, 29, 60);
+  color: #ffffff;
+  width: fit-content;
+  border-radius: 10px;
+  text-decoration: none;
+  outline: transparent;
+  border: transparent;
+  padding: 10px 20px;
+}
+.sign_in_section .form_buttons input:hover {
+  background-color: #a5d4de;
+  color: rgb(0, 29, 60);
+}
+#type_identity {
+  display: flex;
+}
+#type_identity label {
+  width: fit-content;
+  display: flex;
+}
+#type_identity label input {
+  width: fit-content;
+  height: 15px;
+  width: 15px;
+}
+/* ______ end signin   section __________ */
+
+/* ________________ start footer ______________ */
+footer {
+  margin-top: 200px;
+  background-color: #5c6f8a;
+}
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer div img {
+  height: 200px;
+  filter: grayscale(0);
+  filter: brightness(100);
+}
+footer {
+  background: linear-gradient(20deg, rgb(168, 120, 114), rgb(0, 29, 60));
+  padding: 20px;
+  margin-top: 200px;
+}
+footer .info_container iframe {
+  border-radius: 10px;
+  border: solid 2px rgb(230, 101, 82);
+}
+footer .info_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+footer .info_container .store_infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 350px;
+  padding: 20px;
+}
+footer .info_container .store_infos #contact_form_link {
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer .info_container .store_infos #contact_form_link:hover {
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer .info_container .store_infos div i {
+  color: #ffffff;
+  margin-right: 10px;
+}
+footer .info_container .store_infos div {
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.social_media_links {
+  display: flex;
+  justify-content: flex-start;
+}
+.social_media_links a {
+  color: rgb(151, 152, 152);
+  font-size: 25px;
+  margin-right: 10px;
+  transition: 1s;
+}
+.social_media_links a:hover {
+  color: rgb(151, 152, 152);
+  font-size: 25px;
+
+  transform: scale(1.1);
+}
+footer .bank_card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+footer .bank_card div img {
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
+}
+footer .bank_card div {
+  display: flex;
+  justify-content: center;
+}
+footer .bank_card p {
+  color: rgb(47, 161, 161);
+  font-weight: bolder;
+  font-size: 25px;
+}
+footer .copy_right {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* ________________ end footer ______________ */
+
+/* ________ responsive ____________ */
+@media (max-width: 557px) {
+  .about_us_section p {
+    font-size: 25px;
+    text-align: center;
+
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+  }
+  .sign_in_section form label input {
+    width: 250px;
+    height: 35px;
+    outline: #425c81;
+    border: #425c81;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f3f4f9;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .sign_in_section form label textarea {
+    min-width: 250px;
+    min-height: 100px;
+    max-width: 250px;
+    max-height: 100px;
+    outline: #425c81;
+    border: #425c81;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f3f4f9;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+  }
+}
+@media (max-width: 400px) {
+  .store_infos {
+    width: 300px;
+    font-size: 20px;
+  }
+  .store_infos div {
+    font-size: 10px;
+  }
+  footer .info_container .store_infos div i {
+    color: #ffffff;
+    margin-right: 0px;
+  }
+  footer .info_container .store_infos div {
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+  }
+}
+/* ________ responsive ____________ */

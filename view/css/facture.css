@@ -1,0 +1,300 @@
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1em;
+    position: relative;
+    overflow-y: hidden;
+}
+
+/* _______________ Devis __________________________ */
+
+
+.hide-facture{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+  background-color: #ffffff;
+
+}
+.hide-facture img{
+  height: 50px;
+}
+.hide-facture a{
+  color: #000000;
+  padding: 10px;
+  font-size: 20px;
+}
+.hide-facture h1{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color:#333333 ;
+  text-align: center;
+}
+.facture_container {
+    width: 100%;
+    padding: 1.5cm;
+    height: 27.9cm;
+}
+
+.logo_et_facture {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_et_facture img {
+    width: 120px;
+    filter: brightness(0);
+}
+
+.logo_et_facture h1 {
+    font-weight: bolder;
+    font-size: 30px;
+    /* border: 1px solid rgb(0, 29, 60); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    background-color: #f2f2f2;
+    color: white;
+    background-color: #425c81;
+}
+
+.adresse {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 0.7cm;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.client_infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1cm auto;
+    /* margin: ; */
+    width: 100%;
+}
+.client_infos_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    /* width: 100%; */
+    /* margin: auto; */
+}
+input {
+    text-align: center;
+}
+
+.client_name{
+  font-size: 25px;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+
+
+
+.tables {
+    margin-top: 1cm;
+    border-collapse: collapse;
+    border-collapse: collapse;
+}
+.table1{
+  border-collapse: collapse;
+}
+table th {
+    padding: 2px 7px;
+    text-align: center;
+    border: 1px solid;
+    background-color: #f2f2f2;
+}
+table td {
+    padding: 2px 7px;
+    text-align: center;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.table_infos {
+    margin-top: 0.5cm;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table_infos td  {
+  height: 0.7cm;
+}
+
+.table_infos .intitul {
+    width: 25%;
+}
+
+.fac td input {
+    width: 100%;
+}
+/* .dev input {
+    width: 2.5cm;
+} */
+.total {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0.5cm;
+    border-collapse: collapse;
+    /* position: relative;; */
+}
+.total table {
+    font-weight: 700;
+    border-collapse: collapse;
+    /* position: absolute;;
+    bottom: -5cm; */
+}
+.imprimer {
+    margin: 15px 30px;
+    background-color: #3ab1cf;
+    border-radius: 5px;
+    outline: transparent;
+    border: transparent solid;
+    padding: 5px 10px;
+    color: white;
+    font-weight: 500;
+}
+.table_total {
+    min-width: 33.5%;
+    max-width: 33.5%;
+}
+.table_total tr {
+    width: calc(100% / 2);
+}
+.table_total tr td {
+    width: calc(100% / 2);
+}
+/* .table_total td{
+    width: calc(100% );
+} */
+.imprimer:hover {
+    box-shadow: #3ab1cf 0px 0px 5px 3px;
+}
+@media print {
+    .delBtn {
+        display: none;
+    }
+    /*.facture_container{
+        display: block;
+    } */
+    input {
+        outline: transparent;
+        border: transparent;
+    }
+    #result_search_intitul_container {
+        display: none;
+    }
+    .menu_div {
+        display: none;
+    }
+    .side-bar {
+        display: none;
+    }
+    .menu {
+        display: none;
+    }
+    .client {
+        display: none;
+    }
+    .prospect {
+        display: none;
+    }
+    .Adresse_cc {
+        display: none;
+    }
+    .nav_container {
+        display: none;
+    }
+    .input_prs {
+        font-weight: 500;
+        font-size: 25px;
+    }
+    .nom_apprenant {
+        font-weight: 500;
+        font-size: 25px;
+        display: flex;
+    }
+    .ICE_client {
+        font-weight: 400;
+    }
+    .search_result_container {
+        display: none;
+    }
+    .input_prs {
+        font-weight: 500;
+        font-size: 25px;
+        width: 100px;
+    }
+    .input_container {
+        display: none;
+    }
+    .imprimer {
+        display: none;
+    }
+    .btn {
+        display: none;
+    }
+    .btn-primary {
+        display: none;
+    }
+    textarea {
+        border: none;
+        outline: navajowhite;
+    }
+    footer {
+        display: none;
+    }
+   
+}
+
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    /* text-align: center; */
+    width: 100%;
+}
+.footer span {
+    text-align: center;
+    font-size: 13px;
+    border-top: rgb(0, 29, 60) 1px solid;
+    position: absolute;
+    bottom: 0.5cm;
+}
+
+/* *{border: 1px solid black;} */
+.table_infos td:nth-child(1) {
+    text-align: start;
+    /* background-color: #981919; */
+}
+.table_infos th:nth-child(1) {
+    text-align: start;
+    /* background-color: #981919; */
+}
+
+.Intitule {
+    margin-top: 10px;
+    font-weight: 500;
+}
